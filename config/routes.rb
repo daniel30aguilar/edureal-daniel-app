@@ -7,13 +7,16 @@ Rails.application.routes.draw do
   # Support stripe payments through charges
   resources :charges
 
-  # Route for showing products
-  resources :products, only: [:index, :show]
+  # Route for showing products, nested videos to each course.
+  resources :products, only: [:index, :show] do
+    resources :videos, only: [:index, :show]
+  end
 
-  # Route for showing purchases
-  resources :purchases, only: [:show]
+  # Route for showing purchases. 
+  resources :purchases, only: [:show]  
+    
 
-  # The priority is based upon order of creation: first created -> highest priority.
+    # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
