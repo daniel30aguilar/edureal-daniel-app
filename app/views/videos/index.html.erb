@@ -1,1 +1,8 @@
-List of videos here
+List of videos here!
+
+<ul>
+<% @videos.each do |video| %>
+		<li><%= video.video_title %></li>
+<% end %>
+
+</ul>

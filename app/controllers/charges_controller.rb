@@ -19,7 +19,7 @@ class ChargesController < ApplicationController
     	amount: @amount, description: product.full_description, currency: "usd",
     	customer_id: customer.id, product_id: product.id, uuid: SecureRandom.uuid)
 
-	  redirect_to purchase
+	  redirect_to product_videos 
 
 	rescue Stripe::CardError => e
 	  flash[:error] = e.message
