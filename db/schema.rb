@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150309193018) do
+ActiveRecord::Schema.define(version: 20150311004940) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -78,8 +78,10 @@ ActiveRecord::Schema.define(version: 20150309193018) do
   create_table "videos", force: true do |t|
     t.string   "video_title"
     t.string   "video_url"
+    t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "video_id"
   end
 
 end

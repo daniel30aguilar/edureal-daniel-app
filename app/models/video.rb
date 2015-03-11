@@ -1,3 +1,3 @@
-belongs_to :product
 class Video < ActiveRecord::Base
+	belongs_to :product
 end

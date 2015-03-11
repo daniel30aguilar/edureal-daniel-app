@@ -1,6 +1,5 @@
-has_many :videos
-
 class Product < ActiveRecord::Base
+	has_many :videos
 	def full_description
 		"#{self.title} #{self.subtitle}"		
 	end
