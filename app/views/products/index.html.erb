@@ -19,3 +19,19 @@
 		</div>
 	<% end %>
 </section>
+
+<% if user_signed_in? %>
+          # do something
+     <% else %>
+
+<aside id="details-aside" class="col-sm-5">
+	<ul id="details-infobox" class="list-group">
+              <li class="list-group-item active clearfix">Usurios con Ganas de Aprender</li>
+              <li class="list-group-item"><%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %></li>
+              <li class="list-group-item clearfix">
+              <span class="pull-left"><%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %></span>
+              </li>
+  </ul>
+</aside>
+
+<% end %>

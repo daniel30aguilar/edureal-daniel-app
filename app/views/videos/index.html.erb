@@ -1,8 +1,29 @@
-List of videos here!
+<section id="content-receipt" class="clearfix">
+	<div id="receipt-container">
+		<div class="dotmatrix left"></div>
+		<div id="receipt-content">
+			<h4 id="receipt-title">Gracias!</h4>
+				
+			<div id="receipt-details" class="row clearfix">
+				<div class="col-sm-8 receipt-left">
+					<p><strong class="font-weight-heavy">List of videos here</strong><br/> <span class="font-weight-light">Aprende</span></p>
+				</div>				
+			</div>
+			
+			<footer id="receipt-footer">
+				<small>"Edu Real" La educación que necesitan las start up's, pequeña y mediana empresa.!</small>
+			</footer>
+			<section id="products">
+				<% @videos.each do |video| %>
+					<div class="product clearfix">
+					 <a href="<%=product_videos_path(video) %>">		  
+					 <%= video.video_title %>
+					</div>
+				<% end %>
+			</section>
+		</div>
 
-<ul>
-<% @videos.each do |video| %>
-		<li><%= video.video_title %></li>
-<% end %>
-
-</ul>
+		<div class="dotmatrix right"></div>
+	</div>
+	<div id="receipt-shadow"></div>
+</section>

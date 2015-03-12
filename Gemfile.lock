@@ -206,7 +206,7 @@ DEPENDENCIES
   activeadmin!
   bootstrap-sass
   coffee-rails (~> 4.0.0)
-  devise
+  devise (~> 3.4.1)
   figaro
   jbuilder (~> 2.0)
   jquery-rails
