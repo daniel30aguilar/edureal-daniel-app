@@ -24,8 +24,8 @@ growth_hacking_monthly = Product.create(title: "Growth Hacking Monthly",
                 <p>Why take my class? In the past I've advised companies like Pepsico, Bloomberg, GM, NYSE, and JPMorgan on growth hacking best practices. I've also spoken at New York University, Cooper Union and First Round Capital. My goal is to help you and other entrepreneurs rapidly grow your business. 
                 </p>
                 <p>Follow me on Twitter <a href="https://twitter.com/mattangriffel" target="_blank">@mattangriffel</a></p>})  
-accounting_lesson = Video.create(video_title: "Accounting Lesson", video_url: "https://vimeo.com/100357654", video_id: growth_hacking_monthly.id)
-financial_modeling = Video.create(video_title: "Financial Modeling", video_url: "https://vimeo.com/77740140", video_id: growth_hacking_monthly.id)
+accounting_lesson = Video.create(video_title: "Accounting Lesson", video_url: "https://vimeo.com/100357654", product_id: growth_hacking_monthly.id)
+financial_modeling = Video.create(video_title: "Financial Modeling", video_url: "https://vimeo.com/77740140", product_id: growth_hacking_monthly.id)
 copywriting_monthly = Product.create(title: "Copywriting Monthly",
     subtitle: "Ongoing Course", author: "Mattan Griffel", 
     length: "6 Months", author_image_name: "teacher-image.jpg" , 
