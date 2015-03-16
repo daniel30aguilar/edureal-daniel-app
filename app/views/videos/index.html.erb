@@ -1,13 +1,12 @@
 <article id="details-article" class="col-sm-12">
-        <h1 id="article-title">List of videos here!
-</h1>
+   <h1 id="article-title">List of videos here!</h1>
 </article>
 
 
 <section id="videos">
 	<% @videos.each do |video| %>
 		<div class="product clearfix">
-		 <%= link_to video.video_title, product_video_path(video) %>
+		 <%= link_to video.video_title, product_video_path(params[:product_id], video.id) %>
 		</div>
 	<% end %>
 </section>
