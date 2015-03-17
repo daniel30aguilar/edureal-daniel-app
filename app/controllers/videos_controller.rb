@@ -3,6 +3,6 @@ class VideosController < ApplicationController
   	@videos = Video.where('product_id = ?', params[:product_id])
   end 
   def show
-  	@videos = Video.find(params[:id])
+  	@video = Video.find(params[:id])
   end
 end 
