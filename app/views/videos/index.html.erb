@@ -1,13 +1,29 @@
-<article id="details-article" class="col-sm-12">
-   <h1 id="article-title">List of videos here!</h1>
-</article>
+<section id="content-receipt" class="clearfix">
+	<div id="receipt-container">
+		<div class="dotmatrix left"></div>
+		<div id="receipt-content">
+			<h3 id="receipt-title">CONTENIDO DEL CURSO</h3>
 
+			<div id="receipt-details" class="row clearfix">
+				<div class="col-sm-12 receipt-left">
+					<p><span class="font-weight-light">Subtitulo</span></p>
+				</div>				
+			</div>
+			      	
+	
+			<footer id="receipt-footer">
+				<section id="videos">
+					<% @videos.each do |video| %>
+						<ul class="no-indent">
+	            <li><strong class="font-weight-heavy"><h4><%= link_to video.video_title, product_video_path(params[:product_id], video.id) %></strong></h4></li> 	                     
+	        	</ul>
+	        <% end %> 
+        </section>
 
-<section id="videos">
-	<% @videos.each do |video| %>
-		<div class="product clearfix">
-		 <%= link_to video.video_title, product_video_path(params[:product_id], video.id) %>
+				
+			</footer>
 		</div>
-	<% end %>
+		<div class="dotmatrix right"></div>
+	</div>
+	<div id="receipt-shadow"></div>
 </section>
-
